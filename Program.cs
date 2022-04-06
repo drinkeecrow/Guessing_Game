@@ -55,11 +55,16 @@ namespace Guessing_Game
                     {
                         Startup();
                     }
-                    else
+                    else if (answerText.Equals("No", StringComparison.OrdinalIgnoreCase))
                     {
                         Console.WriteLine("Thanks for playing!");
                         Console.ReadLine();
                         Environment.Exit(0);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Sorry! I didn't Understand That." /n "Would you like to play again?");
+                        string answerText = Console.ReadLine();
                     }
 
                 }
